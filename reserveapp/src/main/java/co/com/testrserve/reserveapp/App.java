@@ -72,9 +72,7 @@ public class App
     		int n_start =1;
 			RConnection con = new RConnection("localhost", 6311);
 			con.eval("source('C:\\\\dev\\\\R\\\\workspace\\\\ClusterServiceScripts\\\\KMeansScript.R')");
-			//con.eval("distanceMeasure="+distanceMeasure);
-			//con.eval("centers="+centers);
-			//con.eval("iter_max="+iter_max);s
+			
 			con.assign("dfa", dataFrame);
 			REXP rt=con.eval("try (scale(dfu), silent = TRUE)");
 			con.eval("try (asignarDataFrame(), silent = TRUE)");
